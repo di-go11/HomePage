@@ -5,6 +5,7 @@
   "dependencies": {
     "@react-three/drei": "^9.105.4",
     "@react-three/fiber": "^8.16.6",
+    "luxon": "^3.6.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.23.1",
@@ -17,7 +18,7 @@
     "@types/three": "^0.164.1",
     "@vitejs/plugin-react": "^4.2.1",
     "typescript": "^5.4.5",
-    "vite": "^5.2.11"
+    "vite": "^6.3.5"
   },
   "scripts": {
     "dev": "vite",

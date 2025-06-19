@@ -1,6 +1,7 @@
 import React from 'react'
 import ThreeScene from '../components/three/ThreeScene'
 import './Home.css'
+import Greet from './GreetTime'
 
 const Home: React.FC = () => {
   return (
@@ -11,8 +12,8 @@ const Home: React.FC = () => {
           <div className="hero-content">
             <div className="hero-text">
               <h1 className="hero-title">
-                こんにちは！<br />
-                <span className="gradient-text">私は、H DGGと申します</span>
+                <Greet />
+                <span className="gradient-text">本サイトの管理者DAGOです。</span>
               </h1>
               <p className="hero-description">
                 AIとVRを愛する<br />
