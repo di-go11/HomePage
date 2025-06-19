@@ -24,15 +24,6 @@ const Footer: React.FC = () => {
               <li><a href="/blog">ブログ</a></li>
               <li><a href="/contact">お問い合わせ</a></li>
             </ul>
-          </div>          <div className="footer-section">
-            <h4>趣味・興味</h4>
-            <ul className="footer-links">
-              <li>3Dモデリング</li>
-              <li>Web開発</li>
-              <li>アニメーション</li>
-              <li>ゲーム制作</li>
-              <li>音楽</li>
-            </ul>
           </div>
 
           <div className="footer-section">
