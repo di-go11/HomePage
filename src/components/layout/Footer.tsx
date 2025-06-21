@@ -7,11 +7,12 @@ const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="footer-content">          <div className="footer-section">
+        <div className="footer-content">
+            <div className="footer-section">
             <h3>My Personal Site</h3>
             <p>
               こんにちは！私の個人サイトへようこそ。<br />
-              3Dモデリングと Web開発が大好きです。
+              3DモデリングとAIが大好きです。
             </p>
           </div>
 

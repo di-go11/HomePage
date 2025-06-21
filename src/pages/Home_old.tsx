@@ -35,6 +35,38 @@ const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* 自己紹介セクション */}
+      <section className="introduction section">
+        <div className="container">
+          <h2 className="section-title">DGGについて</h2>
+          <div className="intro-content">
+            <div className="intro-text">
+              <p className="intro-description">
+                こんにちは！私は AIとVR、ゲームを愛するエンジニアです。
+                日々新しい技術を学び、思い浮かべたものをその熱意のまま形作ることに努力しています。
+              </p>
+              <div className="intro-highlights">
+                <div className="highlight-item">
+                  <div className="highlight-icon">💻</div>
+                  <h3>Web開発</h3>
+                  <p>React、TypeScript を使った モダンなWebアプリケーション開発</p>
+                </div>
+                <div className="highlight-item">
+                  <div className="highlight-icon">🎨</div>
+                  <h3>3Dモデリング</h3>
+                  <p>Three.js を使った インタラクティブな3D体験の制作</p>
+                </div>
+                <div className="highlight-item">
+                  <div className="highlight-icon">�</div>
+                  <h3>学習・探求</h3>
+                  <p>新しい技術への好奇心と 継続的な学習への情熱</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 最近の活動セクション */}
       <section className="recent-activities section">
         <div className="container">
