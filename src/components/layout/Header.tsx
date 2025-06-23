@@ -26,8 +26,9 @@ const Header: React.FC = () => {
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
-        <div className="header-content">          <Link to="/" className="logo">
-            <span>My Personal Site</span>
+        <div className="header-content">
+          <Link to="/" className="logo">
+            <span>Dagoの個人サイト</span>
           </Link>
 
           <nav className={`nav ${isMobileMenuOpen ? 'nav-open' : ''}`}>

@@ -1,6 +1,7 @@
 import React from 'react'
 import ThreeScene from '../components/three/ThreeScene'
 import './Home.css'
+import Greet from './GreetTime'
 
 const Home: React.FC = () => {
   return (
@@ -11,8 +12,8 @@ const Home: React.FC = () => {
           <div className="hero-content">
             <div className="hero-text">
               <h1 className="hero-title">
-                こんにちは！<br />
-                <span className="gradient-text">私は、H DGGと申します</span>
+                <Greet />
+                <span className="gradient-text">本サイトの管理者DAGOです。</span>
               </h1>
               <p className="hero-description">
                 AIとVRを愛する<br />
@@ -29,80 +30,6 @@ const Home: React.FC = () => {
             </div>
             <div className="hero-visual">
               <ThreeScene />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 自己紹介セクション */}
-      <section className="introduction section">
-        <div className="container">
-          <h2 className="section-title">DGGについて</h2>
-          <div className="intro-content">
-            <div className="intro-text">
-              <p className="intro-description">
-                こんにちは！私は AIとVR、ゲームを愛するエンジニアです。
-                日々新しい技術を学び、思い浮かべたものをその熱意のまま形作ることに努力しています。
-              </p>
-              <div className="intro-highlights">
-                <div className="highlight-item">
-                  <div className="highlight-icon">💻</div>
-                  <h3>Web開発</h3>
-                  <p>React、TypeScript を使った モダンなWebアプリケーション開発</p>
-                </div>
-                <div className="highlight-item">
-                  <div className="highlight-icon">🎨</div>
-                  <h3>3Dモデリング</h3>
-                  <p>Three.js を使った インタラクティブな3D体験の制作</p>
-                </div>
-                <div className="highlight-item">
-                  <div className="highlight-icon">�</div>
-                  <h3>学習・探求</h3>
-                  <p>新しい技術への好奇心と 継続的な学習への情熱</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 最近の活動セクション */}
-      <section className="recent-activities section">
-        <div className="container">
-          <h2 className="section-title">最近の活動</h2>
-          <div className="activities-grid">
-            <div className="activity-card card fade-in">
-              <div className="activity-icon">🆕</div>
-              <h3>新しい3Dモデル完成</h3>
-              <p>Three.jsを使った新しいインタラクティブな3Dシーンを制作しました。</p>
-              <span className="activity-date">2025/01/15</span>
-            </div>
-            <div className="activity-card card fade-in">
-              <div className="activity-icon">📝</div>
-              <h3>ブログ記事更新</h3>
-              <p>Web開発で学んだテクニックについて新しい記事を投稿しました。</p>
-              <span className="activity-date">2025/01/10</span>
-            </div>
-            <div className="activity-card card fade-in">
-              <div className="activity-icon">🎯</div>
-              <h3>新しい技術習得</h3>
-              <p>React Three Fiberの新機能について学習を進めています。</p>
-              <span className="activity-date">2025/01/05</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* コール・トゥ・アクション */}
-      <section className="cta section">
-        <div className="container">
-          <div className="cta-content">
-            <h2>一緒に何か創りませんか？</h2>
-            <p>私の作品や活動に興味を持っていただき、ありがとうございます。</p>
-            <div className="cta-buttons">
-              <a href="/contact" className="btn btn-large">
-                お気軽にご連絡ください
-              </a>
             </div>
           </div>
         </div>

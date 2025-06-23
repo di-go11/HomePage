@@ -69,13 +69,13 @@ File > Export > glTF 2.0 (.glb/.gltf)
 
 ### BlenderModelViewerのプロパティ
 
-| プロパティ | 型 | 説明 | デフォルト |
-|------------|----|----|-----------|
-| `modelPath` | string | モデルファイルのパス（必須） | - |
-| `title` | string | モデルのタイトル | - |
-| `autoRotate` | boolean | 自動回転を有効にする | true |
-| `scale` | number | モデルのスケール | 1 |
-| `enableZoom` | boolean | ズーム機能を有効にする | true |
+| プロパティ   | 型      | 説明                         | デフォルト |
+| ------------ | ------- | ---------------------------- | ---------- |
+| `modelPath`  | string  | モデルファイルのパス（必須） | -          |
+| `title`      | string  | モデルのタイトル             | -          |
+| `autoRotate` | boolean | 自動回転を有効にする         | true       |
+| `scale`      | number  | モデルのスケール             | 1          |
+| `enableZoom` | boolean | ズーム機能を有効にする       | true       |
 
 ## 🎛️ 実装例
 
