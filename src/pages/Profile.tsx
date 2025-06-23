@@ -11,7 +11,7 @@ const Profile: React.FC = () => {
               <h1 className="page-title">プロフィール</h1>
               <p className="lead">
                 Dagoと申します。
-                メタバースとAIにVRとAIを活用したアプリケーションの開発を目指して熱意の赴くまま、新しい技術を学び、作品づくりに挑戦し続けています。
+                メタバースとAIにVRとAIを活用したアプリケーションの開発を目指して熱意の赴くまま、技術を学び、作品づくりに挑戦し続けています。
               </p>
             </div>
             <div className="profile-image">
@@ -70,7 +70,7 @@ const Profile: React.FC = () => {
       </section>
       <section className="sns section">
             <div className="SNS">
-                <h3>SNS</h3>
+                <h2>SNS</h2>
                 <div className="sns-links">
                   <div className="twitter-link">
                     <a href="https://twitter.com/telrunn" target="_blank" rel="noopener noreferrer">
@@ -79,7 +79,7 @@ const Profile: React.FC = () => {
                   </div>
                   <div className="github-link">
                     <a href="https://github.com/di-go11" target="_blank" rel="noopener noreferrer">
-                    <img src='./img/github_icon.svg' alt='GitHub Logo' className='github' />
+                    <img src='./img/mark-github-24.svg' alt='GitHub Logo' className='github' />
                     </a>
                   </div>
                 </div>

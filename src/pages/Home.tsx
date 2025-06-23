@@ -34,48 +34,6 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* 最近の活動セクション */}
-      <section className="recent-activities section">
-        <div className="container">
-          <h2 className="section-title">最近の活動</h2>
-          <div className="activities-grid">
-            <div className="activity-card card fade-in">
-              <div className="activity-icon">🆕</div>
-              <h3>新しい3Dモデル完成</h3>
-              <p>Three.jsを使った新しいインタラクティブな3Dシーンを制作しました。</p>
-              <span className="activity-date">2025/01/15</span>
-            </div>
-            <div className="activity-card card fade-in">
-              <div className="activity-icon">📝</div>
-              <h3>ブログ記事更新</h3>
-              <p>Web開発で学んだテクニックについて新しい記事を投稿しました。</p>
-              <span className="activity-date">2025/01/10</span>
-            </div>
-            <div className="activity-card card fade-in">
-              <div className="activity-icon">🎯</div>
-              <h3>新しい技術習得</h3>
-              <p>React Three Fiberの新機能について学習を進めています。</p>
-              <span className="activity-date">2025/01/05</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* コール・トゥ・アクション */}
-      <section className="cta section">
-        <div className="container">
-          <div className="cta-content">
-            <h2>一緒に何か創りませんか？</h2>
-            <p>私の作品や活動に興味を持っていただき、ありがとうございます。</p>
-            <div className="cta-buttons">
-              <a href="/contact" className="btn btn-large">
-                お気軽にご連絡ください
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
