@@ -149,7 +149,7 @@ const ThreeScene: React.FC = () => {  return (
           anchorX="center"
           anchorY="middle"
         >
-          Welcome to My Portfolio
+          Welcome to My site!
         </Text>
 
         {/* カメラコントロール */}

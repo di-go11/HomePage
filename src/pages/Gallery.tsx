@@ -166,6 +166,7 @@ const Gallery: React.FC = () => {
               <span className="tech-tag">WebGL</span>
               <span className="tech-tag">React</span>
               <span className="tech-tag">TypeScript</span>
+              <span className="tech-tag">Blender</span>
             </div>
           </div>
 
@@ -173,7 +174,6 @@ const Gallery: React.FC = () => {
             <h3>3Dモデリングについて</h3>
             <p>
               これらの3Dシーンは、Web上で動作するThree.jsライブラリを使用して作成されています。
-              リアルタイムレンダリングにより、インタラクティブな体験を提供しています。
               今後も新しい作品を追加予定です。
             </p>
           </div>
