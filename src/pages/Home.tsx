@@ -16,8 +16,8 @@ const Home: React.FC = () => {
                 <span className="gradient-text">本サイトの管理者DAGOです。</span>
               </h1>
               <p className="hero-description">
-                AIとVRを愛する<br />
-                クリエイターの個人サイトです
+                これまで制作してきたものをポートフォリオとしてまとめるためのサイトです。
+                <br />
               </p>
               <div className="hero-buttons">
                 <a href="/profile" className="btn">
