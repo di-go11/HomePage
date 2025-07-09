@@ -23,8 +23,8 @@ const Home: React.FC = () => {
                 <a href="/profile" className="btn">
                   プロフィールを見る
                 </a>
-                <a href="/gallery" className="btn btn-outline">
-                  3D作品を見る
+                <a href="/gallery" className="btn">
+                  作品を見る
                 </a>
               </div>
             </div>
