@@ -27,23 +27,6 @@ const Gallery: React.FC = () => {
       created: '2024-01-15',
       technologies: ['Three.js', 'WebGL', 'React', 'TypeScript']
     },
-    {
-      id: 1,
-      title: '3Dテキスト表示',
-      description: 'Three.jsで作成した立体的なテキスト表示。フォントの3D化とライティング効果を実装。',
-      scene: 'text',
-      component: ThreeScene,
-      created: '2024-01-10',
-      technologies: ['Three.js', 'TextGeometry', 'WebGL']
-    },
-    {
-      id: 2,
-      title: 'パーティクルエフェクト',
-      description: '美しいパーティクルアニメーションのデモンストレーション。数千の粒子が流動的に動きます。',
-      scene: 'particles',
-      component: ThreeScene,
-      created: '2024-01-05',
-      technologies: ['Three.js', 'Particles', 'GLSL', 'Animation']    },
     // Blenderモデルの例（モデルファイルを追加する際にコメントアウトを解除）
     // {
     //   id: 3,
@@ -113,7 +96,8 @@ const Gallery: React.FC = () => {
                 </div>
               ))}
             </div>
-          </div>          <div className="gallery-viewer">
+          </div>
+          <div className="gallery-viewer">
             <div className="three-scene-container">
               {/* 選択されたアイテムに対応するコンポーネントをレンダリング */}
               {galleryItems[selectedItem].component && 
