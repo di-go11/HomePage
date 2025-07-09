@@ -18,7 +18,7 @@ const Header: React.FC = () => {
   const navItems = [
     { path: '/', label: 'ホーム' },
     { path: '/profile', label: 'プロフィール' },
-    { path: '/gallery', label: '3Dギャラリー' },
+    { path: '/gallery', label: 'ギャラリー' },
     { path: '/blog', label: 'ブログ' },
     { path: '/contact', label: 'お問い合わせ' }
   ]
