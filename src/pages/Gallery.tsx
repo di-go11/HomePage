@@ -1,75 +1,56 @@
 import React, { useState } from 'react'
-import ThreeScene from '../components/three/ThreeScene'
-import BlenderModelViewer from '../components/three/BlenderModelViewer'
 import './Gallery.css'
 
-interface GalleryItem {
+interface VideoGalleryItem {
   id: number
   title: string
   description: string
-  scene: string
-  component?: React.ComponentType<any>
+  videoPath: string
+  thumbnail?: string
   created: string
-  technologies: string[]
+  duration: string
+  category: string
+  details: string
 }
 
 const Gallery: React.FC = () => {
   const [selectedItem, setSelectedItem] = useState<number>(0)
 
-  // 新しい3Dモデルを追加する際は、ここに新しいアイテムを追加してください
-  const galleryItems: GalleryItem[] = [
+  // 動画ファイルを追加する際は、ここに新しいアイテムを追加してください
+  const videoItems: VideoGalleryItem[] = [
     {
       id: 0,
-      title: 'インタラクティブ3Dシーン',
-      description: '回転するキューブ、球体、トーラスとパーティクルエフェクトを組み合わせた動的な3Dシーン。マウス操作でカメラを制御できます。',
-      scene: 'default',
-      component: ThreeScene,
-      created: '2024-01-15',
-      technologies: ['Three.js', 'WebGL', 'React', 'TypeScript']
+      title: 'サンプル動画1',
+      description: 'デモンストレーション用のサンプル動画です。',
+      videoPath: '/videos/sample1.mp4',
+      thumbnail: '/img/video-thumb1.jpg',
+      created: '2024-10-01',
+      duration: '2:30',
+      category: 'デモ',
+      details: 'この動画は技術デモンストレーションとして作成されました。WebベースのビデオプレーヤーでHTML5のvideo要素を使用して再生しています。'
     },
-    // Blenderモデルの例（モデルファイルを追加する際にコメントアウトを解除）
+    {
+      id: 1,
+      title: 'サンプル動画2',
+      description: 'プロジェクト紹介動画のサンプルです。',
+      videoPath: '/videos/sample2.mp4',
+      thumbnail: '/img/video-thumb2.jpg',
+      created: '2024-10-15',
+      duration: '3:45',
+      category: 'プロジェクト',
+      details: 'プロジェクトの概要と開発過程を紹介する動画です。Reactコンポーネントとして実装されており、レスポンシブデザインに対応しています。'
+    }
+    // 新しい動画を追加する場合は、以下のような形式で追加してください：
     // {
-    //   id: 3,
-    //   title: 'Blenderモデル - キャラクター',
-    //   description: 'Blenderで作成した3Dキャラクターモデル。詳細なテクスチャとアニメーション付き。',
-    //   scene: 'blender-character',
-    //   component: () => <BlenderModelViewer 
-    //     modelPath="/models/character.glb" 
-    //     title="3Dキャラクター"
-    //     autoRotate={true}
-    //     scale={1}
-    //   />,
-    //   created: '2024-02-01',
-    //   technologies: ['Blender', 'Three.js', 'GLTF', 'WebGL']
-    // },
-    // {
-    //   id: 4,
-    //   title: 'Blenderモデル - 建築',
-    //   description: 'Blenderで設計した建築物の3Dモデル。リアルな照明とマテリアル設定。',
-    //   scene: 'blender-building',
-    //   component: () => <BlenderModelViewer 
-    //     modelPath="/models/building.glb" 
-    //     title="建築物モデル"
-    //     autoRotate={false}
-    //     scale={0.5}
-    //   />,
-    //   created: '2024-01-20',
-    //   technologies: ['Blender', 'Three.js', 'GLTF', 'Architecture']
-    // }
-    // 新しいBlenderモデルを追加する場合は、以下のような形式で追加してください：
-    // {
-    //   id: 5,
-    //   title: '新しいBlenderモデル',
-    //   description: 'モデルの説明文',
-    //   scene: 'custom-blender-model',
-    //   component: () => <BlenderModelViewer 
-    //     modelPath="/models/your-model.glb" 
-    //     title="モデルタイトル"
-    //     autoRotate={true}
-    //     scale={1}
-    //   />,
-    //   created: '2024-02-15',
-    //   technologies: ['Blender', 'Three.js', 'GLTF', 'WebGL']
+    //   id: 2,
+    //   title: '新しい動画タイトル',
+    //   description: '動画の簡単な説明',
+    //   videoPath: '/videos/your-video.mp4',
+    //   thumbnail: '/img/your-thumbnail.jpg',
+    //   created: '2024-10-30',
+    //   duration: '5:20',
+    //   category: 'カテゴリ名',
+    //   details: '動画の詳細な説明文をここに記述してください。'
     // }
   ]
 
@@ -77,64 +58,113 @@ const Gallery: React.FC = () => {
     <div className="gallery">
       <div className="container">
         <div className="gallery-header">
-          <h1>3Dギャラリー</h1>
-          <p>Three.jsを使用して作成した3Dモデルとアニメーションを展示しています。</p>
+          <h1>動画ギャラリー</h1>
+          <p>様々な動画コンテンツをWebブラウザで直接再生・視聴できます。</p>
         </div>
 
         <div className="gallery-content">
           <div className="gallery-sidebar">
-            <h3>作品一覧</h3>
+            <h3>動画一覧</h3>
             <div className="gallery-list">
-              {galleryItems.map((item) => (
+              {videoItems.map((item) => (
                 <div
                   key={item.id}
                   className={`gallery-item ${selectedItem === item.id ? 'active' : ''}`}
                   onClick={() => setSelectedItem(item.id)}
                 >
-                  <h4>{item.title}</h4>
-                  <p>{item.description}</p>
+                  <div className="video-item-header">
+                    <h4>{item.title}</h4>
+                    <span className="category-tag">{item.category}</span>
+                  </div>
+                  <p className="video-description">{item.description}</p>
+                  <div className="video-meta">
+                    <span className="duration">⏱️ {item.duration}</span>
+                    <span className="created">📅 {item.created}</span>
+                  </div>
                 </div>
               ))}
             </div>
           </div>
+          
           <div className="gallery-viewer">
-            <div className="three-scene-container">
-              {/* 選択されたアイテムに対応するコンポーネントをレンダリング */}
-              {galleryItems[selectedItem].component && 
-                React.createElement(galleryItems[selectedItem].component!)
-              }
+            <div className="video-player-container">
+              <video
+                className="video-player"
+                controls
+                preload="metadata"
+                poster={videoItems[selectedItem].thumbnail}
+                key={videoItems[selectedItem].id} // 動画切り替え時にプレーヤーをリセット
+              >
+                <source src={videoItems[selectedItem].videoPath} type="video/mp4" />
+                <p>お使いのブラウザは動画の再生をサポートしていません。</p>
+              </video>
             </div>
-            <div className="scene-info">
-              <div className="scene-header">
-                <h3>{galleryItems[selectedItem].title}</h3>
-                <div className="scene-meta">
-                  <span className="creation-date">作成日: {galleryItems[selectedItem].created}</span>
-                </div>
-              </div>
-              <p className="scene-description">{galleryItems[selectedItem].description}</p>
-              
-              <div className="scene-technologies">
-                <h4>使用技術</h4>
-                <div className="tech-tags">
-                  {galleryItems[selectedItem].technologies.map(tech => (
-                    <span key={tech} className="tech-tag">{tech}</span>
-                  ))}
+            
+            <div className="video-info">
+              <div className="video-header">
+                <h3>{videoItems[selectedItem].title}</h3>
+                <div className="video-meta-detail">
+                  <span className="creation-date">作成日: {videoItems[selectedItem].created}</span>
+                  <span className="video-duration">再生時間: {videoItems[selectedItem].duration}</span>
+                  <span className="video-category">カテゴリ: {videoItems[selectedItem].category}</span>
                 </div>
               </div>
               
-              <div className="scene-controls">
-                <p>🖱️ マウスでドラッグして視点を変更できます</p>
+              <div className="video-description">
+                <h4>概要</h4>
+                <p>{videoItems[selectedItem].description}</p>
+              </div>
+              
+              <div className="video-details">
+                <h4>詳細情報</h4>
+                <p>{videoItems[selectedItem].details}</p>
+              </div>
+              
+              <div className="video-controls">
                 <div className="control-buttons">
-                  <button className="btn btn-secondary" onClick={() => window.location.reload()}>
-                    🔄 リセット
+                  <button 
+                    className="btn btn-secondary" 
+                    onClick={() => {
+                      const video = document.querySelector('.video-player') as HTMLVideoElement;
+                      if (video) {
+                        video.currentTime = 0;
+                        video.pause();
+                      }
+                    }}
+                  >
+                    � 最初から再生
                   </button>
-                  <button className="btn btn-primary" onClick={() => {
-                    const element = document.querySelector('.three-scene-container');
-                    if (element?.requestFullscreen) {
-                      element.requestFullscreen();
-                    }
-                  }}>
-                    🔍 フルスクリーン
+                  <button 
+                    className="btn btn-primary" 
+                    onClick={() => {
+                      const video = document.querySelector('.video-player') as HTMLVideoElement;
+                      if (video?.requestFullscreen) {
+                        video.requestFullscreen();
+                      }
+                    }}
+                  >
+                    � フルスクリーン
+                  </button>
+                  <button 
+                    className="btn btn-secondary"
+                    onClick={() => {
+                      const video = document.querySelector('.video-player') as HTMLVideoElement;
+                      if (video) {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = video.videoWidth;
+                        canvas.height = video.videoHeight;
+                        const ctx = canvas.getContext('2d');
+                        if (ctx) {
+                          ctx.drawImage(video, 0, 0);
+                          const link = document.createElement('a');
+                          link.download = `${videoItems[selectedItem].title}_screenshot.png`;
+                          link.href = canvas.toDataURL();
+                          link.click();
+                        }
+                      }
+                    }}
+                  >
+                    � スクリーンショット
                   </button>
                 </div>
               </div>
@@ -144,21 +174,21 @@ const Gallery: React.FC = () => {
 
         <div className="gallery-info">
           <div className="info-section">
-            <h3>技術スタック</h3>
+            <h3>対応形式</h3>
             <div className="tech-stack">
-              <span className="tech-tag">Three.js</span>
-              <span className="tech-tag">WebGL</span>
-              <span className="tech-tag">React</span>
-              <span className="tech-tag">TypeScript</span>
-              <span className="tech-tag">Blender</span>
+              <span className="tech-tag">MP4</span>
+              <span className="tech-tag">WebM</span>
+              <span className="tech-tag">H.264</span>
+              <span className="tech-tag">HTML5 Video</span>
             </div>
           </div>
 
           <div className="info-section">
-            <h3>3Dモデリングについて</h3>
+            <h3>動画ギャラリーについて</h3>
             <p>
-              これらの3Dシーンは、Web上で動作するThree.jsライブラリを使用して作成されています。
-              今後も新しい作品を追加予定です。
+              HTML5のvideo要素を使用してWebブラウザ上で動画を再生します。
+              各動画にはサムネイル、詳細情報、再生時間などの情報が含まれています。
+              フルスクリーン表示やスクリーンショット機能もご利用いただけます。
             </p>
           </div>
         </div>
